@@ -1,0 +1,28 @@
+/* Продукт начало */
+.product {
+    text-align: center;
+}
+
+.product a {
+    text-decoration: none;
+}
+
+.to_cart {
+    background-color: #7188d4;
+    border-radius: 5px;
+    color: white;
+}
+
+.star {
+    color: orange;
+}
+
+.title {
+    color: #2d2d2d;
+}
+
+.price {
+    color: #2d2d2d;
+    font-weight: bold;
+}
+/* Продукт конец */

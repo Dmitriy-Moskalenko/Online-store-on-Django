@@ -1,0 +1,33 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/homepage/home_page.css' %}">
+<link rel="stylesheet" href="{% static 'css/homepage/home_page_responsive.css' %}">
+
+<section class="products-container" id="content">
+    {% for product in all_products %}
+        <article class="product">
+            <a href="">
+                {% if product.image %}
+                    <img src="{{ product.image.url }}" alt="Обложка">
+                {% endif %}
+                <span class="title">{{ product.title }}</span><br>
+                <div class="grade">
+                    {% for star in "12345"|make_list %}
+                        {% if star|add:0 <= product.rating %}
+                            <span class="star">★</span>
+                        {% else %}
+                            <span class="star">☆</span>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <span class="price">{{ product.price }} ₽</span>
+            </a>
+            <a class='to_cart' href="">В корзину</a>
+        </article>
+    {% endfor %}
+
+</section>
+{% endblock %}

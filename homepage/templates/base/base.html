@@ -1,0 +1,195 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/base/base.css' %}">
+<link rel="stylesheet" href="{% static 'css/base/base_responsive.css' %}">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<section class="navbar-container">
+    <article class="navbar-details">
+        <div class="navbar-navigation">
+            <a href="">Оплата</a>
+            <a href="">Доставка</a>
+            <a href="">Обмен и возврат</a>
+        </div>
+        <div class="navbar-info">
+            <p class="navbar-delivery">Доставка с 8:00 до 23:00</p>
+            <p>+7 (800) 800-80-80</p>
+        </div>
+    </article>
+    <article class="navbar-responsive">
+        <div class="dropdown-menu" id="drp-dwn">
+            <div class="close-dropdown-container">
+                <button type="button" class='close-dropdown' onclick="OpenMenu('drp-dwn')">
+                    <img src="{% static 'images/navbar/close.png' %}" alt="Закрыть меню">
+                </button>
+            </div>
+            <div class="dropdown-navigation-container">
+                <div class="dropdown-navigation">
+                    <a href="">
+                        <img class='dropdown-profile' src="{% static 'images/navbar/profile.png' %}" alt="Профиль">
+                    </a>
+                    <a href="">
+                        <p class="count heart-count">110</p>
+                        <img class='dropdown-heart' src="{% static 'images/navbar/heart.png' %}" alt="Избранное">
+                    </a>
+                </div>
+                <div class="search-container">
+                    <form class='dropdown-search-form' method="get" autocomplete="off" action="{% url 'search' %}">
+                        {% csrf_token %}
+                        {{ search_form.as_p }}
+                        <button type="submit" class='dropdown-search-button'>
+                            <img  src="{% static 'images/navbar/search.png' %}" alt="Поиск">
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="dropdown-categories-container">
+                {% for category in all_categories %}
+                    <div class="dropdown-category">
+                        <a href="/">{{ category.title }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="dropdown-info-container">
+                 <div class="dropdown-info-navigation">
+                    <a href="">Оплата</a><br>
+                    <a href="">Доставка</a><br>
+                    <a href="">Обмен и возврат</a>
+                </div>
+                <p class="dropdown-info-delivery">Доставка с 8:00 до 23:00</p>
+                <h2>+7 (800) 800-80-80</h2>
+            </div>
+
+
+        </div>
+        <div id="nav">
+            <button type="button" class="menu" onclick="OpenMenu('drp-dwn')">
+                <img src="{% static 'images/navbar/menu.png' %}" alt="Меню">
+            </button>
+            <div class="cart-container">
+                <p class="count cart-count">110</p>
+                <a href="/" class="cart">
+                    <img src="{% static 'images/navbar/cart.png' %}" alt="Корзина">
+                </a>
+            </div>
+
+            <a href="/" class="logo">
+                <img src="{% static 'images/navbar/logo.png' %}" alt="Лого">
+            </a>
+        </div>
+    </article>
+    <article class="navbar">
+        <div class="navbar-logo-container">
+            <a href="/">
+                <img src="{% static 'images/navbar/logo.png' %}" alt="Логотип">
+            </a>
+        </div>
+        <form method="get" autocomplete="off" action="{% url 'search' %}">
+            {% csrf_token %}
+            {{ search_form.as_p }}
+            <button type="submit" class="navbar-search-button">
+                <img src="{% static 'images/navbar/search.png' %}" alt="Поиск">
+            </button>
+        </form>
+        <div class="navigation">
+            <a href="">
+                <img src="{% static 'images/navbar/profile.png' %}" alt="Профиль">
+            </a>
+            <a href="">
+                <span class="count navbar-count-heart">0</span>
+                <img src="{% static 'images/navbar/heart.png' %}" alt="Избранное">
+            </a>
+            <a href="">
+                <p class="count navbar-count-cart">110</p>
+                <img src="{% static 'images/navbar/cart.png' %}" style="filter: invert();" alt="Корзина">
+                <p class="navbar-money">0 ₽</p>
+            </a>
+        </div>
+    </article>
+</section>
+<section class="categories-container">
+    <article class="categories">
+        {% for category in all_categories %}
+            <div class="category">
+                <a>{{ category.title }}</a>
+            </div>
+
+        {% endfor %}
+    </article>
+    <article class="networks">
+        <h3>Подписывайтесь</h3>
+        <a href="">
+            <img src="{% static '/images/navbar/ok.png' %}" alt="ОК">
+        </a>
+        <a href="">
+            <img src="{% static '/images/navbar/dzen.png' %}" alt="Дзен">
+        </a>
+        <a href="">
+            <img src="{% static '/images/navbar/vk.png' %}" alt="ВК">
+        </a>
+    </article>
+
+</section>
+<section class="content-container">
+    {% block content %}
+    {% endblock %}
+</section>
+<section class="footer-container" id="footer">
+    <div class="footer-logo">
+        <img src="{% static 'images/navbar/logo.png' %}" alt="Лого">
+    </div>
+    <div class="footer-navigation-container">
+        <div class="footer-company">
+            <h4>Компания</h4>
+            <a>О нас</a><br><br>
+            <a>Новости</a><br><br>
+            <a>Реквизиты</a>
+        </div>
+        <div class="footer-service">
+            <h4>Сервис</h4>
+            <a>Оплата</a><br><br>
+            <a>Доставка</a><br><br>
+            <a>Обмен и возврат</a>
+        </div>
+    </div>
+    <div class="footer-info-container">
+        <div class="footer-info">
+            <h4>Контакты</h4>
+            <p>+7 (800) 800-80-80 | +7 (800) 800-80-80</p>
+            <p>г. Москва, 1-я Тверская-Ямская улица, дом 21</p>
+        </div>
+        <div class="footer-networks">
+            <a href="">
+                <img src="{% static '/images/navbar/ok.png' %}" alt="ОК">
+            </a>
+            <a href="">
+                <img class="footer-icon" src="{% static '/images/navbar/dzen.png' %}" alt="Дзен">
+            </a>
+            <a href="">
+                <img class="footer-icon" src="{% static '/images/navbar/vk.png' %}" alt="ВК">
+            </a>
+        </div>
+    </div>
+</section>
+<script>
+    let is_open = false;
+    function OpenMenu(id) {
+        const element = document.getElementById(id);
+        const content = document.getElementById('content');
+        const footer = document.getElementById('footer');
+
+        if (is_open == false) {
+            element.classList.add('active');
+            content.style.display = 'none';
+            footer.style.display = 'none';
+            is_open = true;
+        } else {
+            element.classList.remove('active');
+            content.style.display = 'block';
+            footer.style.display = 'block';
+            is_open = false;
+        }
+
+    }
+</script>

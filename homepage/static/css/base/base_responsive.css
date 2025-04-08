@@ -1,0 +1,486 @@
+/* Навбар начало */
+.navbar-details {
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-responsive {
+    height: 70px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.close-dropdown,
+.cart-container,
+.menu {
+    position: absolute;
+}
+
+.count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.navbar-navigation {
+    margin-left: 2%;
+}
+
+.navbar-navigation a {
+    margin-left: 20px;
+}
+
+.navbar-info {
+    display: flex;
+    margin-right: 2%;
+}
+
+.navbar-info p {
+    margin-right: 20px;
+}
+/* Конец навбар */
+
+
+/* Главный навбар начало */
+.navbar {
+    display: flex;
+}
+
+.navbar-logo-container {
+    width: 205px;
+}
+
+.navbar-logo-container img {
+    width: 125px;
+    padding: 15px 110px;
+}
+
+.search-form {
+    width: 40%;
+    position: absolute;
+    height: 50px;
+    border-radius: 7px 0 0 7px;
+    margin-left: 13%;
+}
+
+.navbar-search-button  {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-left: 53%;
+    border-radius: 0 7px 7px 0;
+}
+
+.navbar-search-button img {
+    width: 60%;
+}
+
+.navigation {
+    margin-left: 57%;
+    margin-top: 23px;
+    display: flex;
+}
+
+.navigation a {
+    width: 40px;
+    height: 40px;
+    margin-left: 40px;
+}
+
+.navigation img {
+    width: 30px;
+    height: 30px;
+}
+
+.navbar-count-cart {
+    margin-left: 20px;
+}
+
+.navbar-money {
+    position: absolute;
+    top: 0;
+    margin-top: 75px;
+    margin-left: 60px;
+    font-size: 20px;
+}
+
+.navbar-count-heart {
+    top: 0;
+    margin: 80px 0 0 20px;
+}
+/* Главный навбар конец */
+
+
+/* Выподающее меню начало */
+.dropdown-menu {
+    width: 100%;
+    height: auto;
+    left: -1000px;
+}
+
+
+.dropdown-menu.active {
+    left: 0;
+}
+
+.menu img {
+    filter: invert();
+}
+
+.close-dropdown img,
+.menu img {
+    width: 25px;
+}
+
+.close-dropdown,
+.menu {
+    margin: 22px;
+}
+
+.dropdown-navigation-container {
+    height: 65px;
+    margin-top: 70px;
+}
+
+.dropdown-navigation-container a {
+    margin-left: 30px;
+}
+
+.dropdown-navigation {
+    height: 35px;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 120px;
+    padding-top: 10px;
+}
+
+.cart-container {
+    margin-top: 20px;
+    right: 32px;
+}
+
+.count {
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+    border-radius: 50%;
+}
+
+.dropdown-heart,
+.dropdown-profile {
+    width: 23px;
+    height: 23px;
+    margin-top: 20px;
+}
+
+.heart-count {
+    margin-top: 28px;
+    margin-left: 10px;
+}
+
+.cart-count {
+    margin-top: 15px;
+    margin-left: 18px;
+}
+
+.search-container {
+    width: 60%;
+    padding-right: 20px;
+}
+
+.dropdown-search-button {
+    width: 33px;
+    height: 33px;
+    margin-top: 16px;
+    margin-left: 73%;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+}
+
+.dropdown-search-button img {
+    width: 15px;
+}
+
+.dropdown-categories-container {
+    width: 100%;
+    height: auto;
+}
+
+.dropdown-category {
+    padding: 20px 15px;
+}
+.dropdown-info-container {
+    margin: 10px 15px;
+}
+
+.dropdown-info-delivery {
+    margin-top: 20px;
+}
+/* Выподающее меню конец */
+
+
+/* Категории начало */
+.categories-container {
+    width: 300px;
+    margin: 20px;
+    position: absolute;
+}
+
+.category {
+     padding: 20px 15px;
+}
+/* Категории конец */
+
+
+/* Контент начало */
+.content-container {
+    width: 70%;
+    height: auto;
+    margin-left: 28%;
+}
+/* Контент конец */
+
+
+/* Соц сети начало */
+.networks {
+    margin-top: 30px;
+}
+
+.networks h3 {
+    font-size: 23px;
+    margin: 15px;
+}
+
+.networks img {
+    width: 50px;
+}
+
+.networks a {
+    margin: 15px;
+}
+/* Соц сети конец */
+
+
+/* Футер начало */
+.footer-container {
+    height: auto;
+    margin-top: 10%;
+    padding: 30px 40px;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-navigation-container {
+    display: flex;
+    position: absolute;
+    margin-top: 15px;
+}
+
+.footer-company a {
+    margin-top: 20px;
+}
+
+.footer-service {
+    margin-left: 100px;
+}
+
+.footer-info-container {
+    margin-left: 65%;
+    margin-top: 40px;
+}
+
+.footer-networks {
+    margin-top: 30px;
+}
+
+.footer-networks a {
+    width: 10px;
+}
+
+.footer-networks img {
+    width: 30px;
+}
+
+.footer-icon {
+    margin-left: 10px;
+}
+/* Футер конец */
+
+
+/* Медиа запросы начало */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .navbar-logo-container img {
+        padding: 15px 70px;
+    }
+
+    .search-form {
+        margin-left: 5%;
+    }
+
+    .navbar-search-button {
+        margin-left: 45%;
+    }
+
+    .navigation {
+        margin-left: 49%;
+    }
+
+    .categories-container {
+        width: 200px;
+    }
+
+    .category a {
+        font-size: 15px;
+    }
+
+    .networks h3 {
+        font-size: 17px;
+    }
+
+    .networks img {
+        width: 30px;
+    }
+
+    .networks a {
+        margin: 10px;
+    }
+
+    .content-container {
+        width: 73%;
+        margin-left: 250px;
+    }
+
+    .footer-container {
+        margin-top: 23%;
+    }
+
+    .footer-logo img {
+        width: 120px;
+    }
+
+    .footer-info-container {
+        margin-left: 60%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .navbar-logo-container {
+        width: 140px;
+    }
+
+    .navbar-logo-container img {
+        width: 100px;
+        margin-top: 5px;
+        padding: 15px 20px;
+    }
+
+    .search-form {
+        width: 35%;
+        margin-left: 0%;
+    }
+
+    .navbar-search-button {
+        margin-left: 35%;
+    }
+
+    .navigation {
+        margin-left: 40%;
+    }
+
+    .content-container {
+        width: 73%;
+        margin-left: 250px;
+    }
+
+    .categories-container {
+        width: 200px;
+    }
+
+    .category a {
+        font-size: 15px;
+    }
+
+    .networks h3 {
+        font-size: 17px;
+    }
+
+    .networks img {
+        width: 30px;
+    }
+
+    .networks a {
+        margin: 10px;
+    }
+
+    .content-container {
+        width: 69%;
+        margin-left: 30%;
+    }
+
+    .footer-container {
+        margin-top: 28%;
+    }
+
+    .footer-logo img {
+        width: 120px;
+    }
+
+    .footer-info-container {
+        margin-left: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar,
+    .navbar-details {
+        display: none;
+    }
+
+    .navbar-responsive {
+        display: block;
+    }
+
+    .search-form {
+        width: 60%;
+        height: 33px;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .footer-logo img {
+        width: 100px;
+    }
+
+    .categories-container {
+        display: none;
+    }
+
+    .content-container {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .footer-networks img {
+        width: 20px;
+    }
+}
+
+@media (max-width: 590px) {
+    .footer-navigation-container {
+        position: static;
+    }
+}
+/* Медиа запросы конец */

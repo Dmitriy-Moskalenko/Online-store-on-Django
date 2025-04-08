@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+/* Общие стили начало */
+body {
+    margin: auto;
+    padding: auto;
+    color: #2d2d2d;
+    font-family: "Onest", serif;
+}
+/* Общие стили конец */
+
+
+/* Навбар начало */
+.navbar-responsive,
+.navbar-details {
+    background-color: #e5ebff;
+}
+
+.close-dropdown,
+.menu {
+    border: none;
+    background-color: transparent;
+}
+
+.cart img {
+    filter: invert();
+}
+
+.count {
+    background-color: #7188d4;
+    color: white;
+    font-weight: bold;
+}
+/* Конец навбар */
+
+
+/* Главный навбар начало */
+.navbar-search-button {
+    border: none;
+    background-color: #7188d4;
+    cursor: pointer;
+}
+
+.navbar-search-button img {
+    filter: invert();
+}
+
+.search-form {
+    border: 1px black solid;
+    font-size: 17px;
+}
+
+.navigation a {
+    text-decoration: none;
+}
+
+.navbar-money {
+    color: #7188d4;
+    font-weight: bold;
+}
+/* Главный навбар конец */
+
+
+/* Выподающее меню начало */
+.dropdown-menu {
+    position: absolute;
+    transition: left 0.3s ease;
+    z-index: 2;
+    background-color: #e5ebff;
+}
+
+.dropdown-navigation-container {
+    background-color: #f7f7f7;
+    display: flex;
+}
+
+.dropdown-navigation-container a {
+    text-decoration: none;
+}
+
+.dropdown-search-form,
+.dropdown-navigation {
+    display: flex;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-form {
+    border: 1px #808080 solid;
+}
+
+.dropdown-search-button {
+    border: none;
+    background-color: #7188d4;
+}
+
+.dropdown-categories-container {
+    background-color: #ffffff;
+}
+
+.dropdown-category {
+    border-bottom: 1px #f7f7f7 solid;
+}
+
+.dropdown-category a {
+    margin: 0;
+    padding: 0;
+    color: #2d2d2d;
+    text-decoration: none;
+}
+
+
+.dropdown-category:hover {
+    color: #7188d4;
+    transition: 0.3s;
+}
+
+.dropdown-info-navigation a {
+    text-decoration: none;
+    color: black;
+    font-weight: 550;
+}
+
+.dropdown-search-button img {
+    filter: invert();
+}
+
+.navbar-delivery,
+.dropdown-info-delivery {
+    color: #969696;
+}
+
+.navbar-navigation a {
+    text-decoration: none;
+    color: #2d2d2d;
+}
+/* Выподающее меню конец */
+
+
+/* Категории начало */
+.category {
+    border-bottom: 2px #f7f7f7 solid;
+}
+
+.category a {
+    color: #2d2d2d;
+    text-decoration: none;
+}
+
+.category:hover {
+    color: #7188d4;
+    transition: 0.3s;
+}
+/* Категории конец */
+
+
+/* Соц сети начало */
+.networks a {
+    text-decoration: none;
+}
+/* Соц сети конец */
+
+
+/* Футер начало */
+.footer-container {
+    background-color: #e5ebff;
+}
+
+.footer-networks a {
+    text-decoration: none;
+}
+/* Футер конец */
+
